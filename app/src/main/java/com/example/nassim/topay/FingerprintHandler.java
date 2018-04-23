@@ -2,6 +2,7 @@ package com.example.nassim.topay;
 
 import android.annotation.TargetApi;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.hardware.fingerprint.FingerprintManager;
 import android.Manifest;
@@ -69,6 +70,8 @@ public class FingerprintHandler extends FingerprintManager.AuthenticationCallbac
             FingerprintManager.AuthenticationResult result) {
 
         Toast.makeText(context, "Authentification réussie!", Toast.LENGTH_LONG).show();
+        context.startActivity(new Intent(context,
+                SampleActivity.class));
     }
 
 }
