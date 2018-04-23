@@ -68,7 +68,7 @@ public class FingerprintHandler extends FingerprintManager.AuthenticationCallbac
     public void onAuthenticationSucceeded(
             FingerprintManager.AuthenticationResult result) {
 
-        Toast.makeText(context, "Success!", Toast.LENGTH_LONG).show();
+        Toast.makeText(context, "Authentification réussie!", Toast.LENGTH_LONG).show();
     }
 
 }

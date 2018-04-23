@@ -5,14 +5,15 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/LemonChiffon"
     tools:context="com.example.nassim.topay.MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/app_name"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        android:text="Authentification digitale"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -21,21 +22,19 @@
         android:id="@+id/textview"/>
 
     <ImageView
+        android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/fingerprint"
-        android:id="@+id/imageView"
-        android:layout_below="@+id/textView"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="153dp"
+        app:srcCompat="@drawable/fingerprint"
         tools:ignore="UnknownId" />
 
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView2"
-        android:text="@string/instructions"
-        android:layout_below="@+id/imageView"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="27dp" />
+        android:layout_centerInParent="true"
+        android:text="Placer votre doigt sur le capteur " />
 </RelativeLayout>
