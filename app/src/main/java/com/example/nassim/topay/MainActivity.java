@@ -13,6 +13,7 @@ import android.security.keystore.KeyPermanentlyInvalidatedException;
 import android.security.keystore.KeyProperties;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v4.app.ActivityCompat;
+import android.util.Log;
 import android.widget.TextView;
 import java.io.IOException;
 import java.security.InvalidAlgorithmParameterException;
@@ -43,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Log.i("info","Entréé dans l'interface demandant une authentification par empreinte digitale");
 
         // If you’ve set your app’s minSdkVersion to anything lower than 23, then you’ll need to verify that the device is running Marshmallow
         // or higher before executing any fingerprint-related code

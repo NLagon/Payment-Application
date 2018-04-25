@@ -9,6 +9,7 @@ import android.Manifest;
 import android.os.Build;
 import android.os.CancellationSignal;
 import android.support.v4.app.ActivityCompat;
+import android.util.Log;
 import android.widget.Toast;
 
 import java.lang.annotation.Target;
@@ -47,6 +48,8 @@ public class FingerprintHandler extends FingerprintManager.AuthenticationCallbac
         //Here, I’m creating the message that’ll be displayed if an error occurs//
 
         Toast.makeText(context, "Authentication error\n" + errString, Toast.LENGTH_LONG).show();
+        Log.e("erreur","Erreur survenue lors du processus d'authentication de l'empreinte");
+
     }
 
     @Override
@@ -55,6 +58,8 @@ public class FingerprintHandler extends FingerprintManager.AuthenticationCallbac
 
     public void onAuthenticationFailed() {
         Toast.makeText(context, "Authentication failed", Toast.LENGTH_LONG).show();
+        Log.i("info","Échec de l'authentification, pas d'empreinte correspondante en base ");
+
     }
 
     @Override
@@ -63,6 +68,8 @@ public class FingerprintHandler extends FingerprintManager.AuthenticationCallbac
     //so to provide the user with as much feedback as possible I’m incorporating this information into my toast//
     public void onAuthenticationHelp(int helpMsgId, CharSequence helpString) {
         Toast.makeText(context, "Authentication help\n" + helpString, Toast.LENGTH_LONG).show();
+        Log.w("info","Le doigt n'a pas été posé assez longtemps sur le capteur" );
+
     }@Override
 
     //onAuthenticationSucceeded is called when a fingerprint has been successfully matched to one of the fingerprints stored on the user’s device//
@@ -72,6 +79,9 @@ public class FingerprintHandler extends FingerprintManager.AuthenticationCallbac
         Toast.makeText(context, "Authentification réussie!", Toast.LENGTH_LONG).show();
         context.startActivity(new Intent(context,
                 SampleActivity.class));
+
+        Log.i("info","Authentification réussie" );
+
     }
 
 }

@@ -77,6 +77,8 @@ public class SampleActivity extends Activity {
         Intent intent = new Intent(this, PayPalService.class);
         intent.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION, config);
         startService(intent);
+        Log.i("info","Entrée dans l'interface Paypal " );
+
     }
 
     public void onBuyPressed(View pressed) {
@@ -103,6 +105,10 @@ public class SampleActivity extends Activity {
         intent.putExtra(PaymentActivity.EXTRA_PAYMENT, thingToBuy);
 
         startActivityForResult(intent, REQUEST_CODE_PAYMENT);
+
+        Log.i("info","Appuyer sur le bouton << Buy a thing >> et entrée dans l'interface demandant l'email et mot de passe" );
+
+
     }
 
     private PayPalPayment getThingToBuy(String paymentIntent) {
