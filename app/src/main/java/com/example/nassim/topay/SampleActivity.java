@@ -106,7 +106,7 @@ public class SampleActivity extends Activity {
 
         startActivityForResult(intent, REQUEST_CODE_PAYMENT);
 
-        Log.i("info","Appuyer sur le bouton << Buy a thing >> et entrée dans l'interface demandant l'email et mot de passe" );
+        Log.i("info","Appuie sur le bouton << Buy a thing >> et entrée dans l'interface demandant l'email et mot de passe" );
 
 
     }
